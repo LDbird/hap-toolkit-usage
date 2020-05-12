@@ -8,41 +8,18 @@
     "features": [
         { "name": "system.prompt" },
         { "name": "system.router" },
-        { "name": "system.shortcut" },
-        { "name": "system.record" },
-        { "name": "system.file" },
-        { "name": "system.storage" },
-        { "name": "system.device" },
-        { "name": "system.fetch" },
-        { "name": "system.package" },
-        { "name": "system.media" },
-        { "name": "system.geolocation" },
-        { "name": "system.wifi" },
-        { "name": "system.sms" },
-        { "name": "system.share" },
-        { "name": "service.ad" },
-        {
-            "name": "service.share",
-            "params": {}
-        },
-        { "name": "system.sensor" }
+        { "name": "system.shortcut" }
     ],
     "permissions": [
         { "origin": "*" }
     ],
     "config": {
-        "logLevel": "trace"
+        "logLevel": "log"
     },
     "router": {
-        "entry": "Demo",
+        "entry": "mediaQuery",
         "pages": {
-            "Demo": {
-                "component": "index"
-            },
-            "DemoDetail": {
-                "component": "index"
-            },
-            "About": {
+            "mediaQuery": {
                 "component": "index"
             }
         },
@@ -57,23 +34,14 @@
         }
     },
     "display": {
-        "titleBar": false,
-        "titleBarBackgroundColor": "#f2f2f2",
-        "statusBarImmersive": false,
-        "titleBarTextColor": "#414141",
-        "windowSoftInputMode": "adjustPan",
-        "fullScreen": false,
+        "titleBar": true,
         "orientation": "landscape",
-        "menu": false,
+        "titleBarBackgroundColor": "#f2f2f2",
+        "titleBarTextColor": "#414141",
+        "menu": true,
         "pages": {
-            "Demo": {
-                "titleBarText": "示例页",
-                "menu": false
-            },
-            "DemoDetail": {
-                "titleBarText": "详情页"
-            },
-            "About": {
+            "mediaQuery": {
+                "titleBarText": "媒体查询",
                 "menu": false
             }
         }
