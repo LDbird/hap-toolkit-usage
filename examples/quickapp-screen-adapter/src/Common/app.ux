@@ -3,37 +3,12 @@
 * 应用级别的配置，供所有页面公用
 */
 import util from './util'
-import request from '@system.request' 
-const hooksglobal = global.__proto || global
-hooksglobal.eid = '' 
+
 export default {
   showMenu: util.showMenu,
   createShortcut: util.createShortcut,
    data1: {
     name: '这是APP存的数据'
-  },
-  method1() {
-    console.info('这是APP的方法')
-    request.download({
-      url: `https://vdept.bdstatic.com/61524d5849595546677a664c77775a35/4354665538465a5a/fb7c7a6fd859a77921bf305e95c979fdbd1dc080e4db88bcee1c8f2edcce6c60dc1fd043ed3497adf731c18dd34663c7.mp4?auth_key=1589189787-0-0-e6367d159bd42fb1c2893039447fc1ea`,
-      filename: `彩云大视频下载.mp4`,
-      success: function(data) {
-          console.log(`成功下载handling success${data.token}`)
-          request.onDownloadComplete({
-            token: data.token,
-            success: function(data) {
-                console.log(`监听成功下载handling success${data.uri}`)
-            },
-            fail: function(data, code) {
-                console.log(`监听下载handling fail, code = ${code}`,data)
-            }
-          })
-      },
-      fail: function(data, code) {
-          console.log(`下载handling fail, code = ${code}`,data)
-      }
-    })
-
-  },
+  }
 }
 </script>
