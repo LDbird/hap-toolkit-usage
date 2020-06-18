@@ -1,0 +1,88 @@
+
+/* 页签的通用定义 */
+.page-tabs {
+    justify-content: space-around;
+    padding: 5dp;
+    background-color: #6FC3DF;
+}
+
+.tabs-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-item .tabs-item-icon {
+    width: 18dp;
+}
+
+.tabs-item .tabs-item-name {
+}
+
+/* 页签在竖屏时的定义 */
+@media(orientation: portrait) {
+    .page-tabs-auto {
+        flex-direction: row;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .page-tabs {
+        height: 60dp;
+    }
+
+    .tabs-item {
+        width: 20%;
+    }
+
+    .tabs-item-name {
+        font-size: 18dp;
+    }
+
+    /* 距离底部的页签 */
+    .tabs-margin-bottom {
+        margin-bottom: 55dp;
+    }
+}
+
+/* 页签在横屏时的定义 */
+@media(orientation: landscape) {
+    .page-tabs-auto {
+        flex-direction: column;
+        height: 100%;
+        position: fixed;
+        left: 0;
+    }
+    .page-tabs-auto-bottom {
+        flex-direction: row;
+        height: 80dp;
+        bottom: 0;
+    }
+
+    .page-tabs {
+        width: 80dp;
+    }
+    .page-tabs-bottom {
+        width: 100%;
+    }
+
+    .tabs-item {
+        height: 20%;
+    }
+
+    .tabs-item-bottom { 
+        width: 20%;
+        height: 100%;
+    }
+
+
+    .tabs-item-name {
+        font-size: 30dp;
+    }
+
+    /* 距离左侧的页签 */
+    .tabs-margin-left {
+        margin-left: 82dp;
+    }
+}
